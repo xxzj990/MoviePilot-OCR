@@ -21,7 +21,7 @@ class OCR(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "paddleocr API"}
+    return {"message": "NAStool OCR API"}
 
 
 @app.post("/captcha/base64")
@@ -37,7 +37,7 @@ async def captcha_base64(data: OCR):
     except Exception as e:
         print(str(e))
         result = ''
-    return {"res": result}
+    return {"result": result}
 
 
 if __name__ == '__main__':
