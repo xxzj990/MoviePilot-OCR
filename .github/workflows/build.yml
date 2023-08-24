@@ -42,4 +42,4 @@ jobs:
             linux/amd64
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/nas-tools-ocr:latest
+            ${{ secrets.DOCKER_USERNAME }}/moviepilot-ocr:latest

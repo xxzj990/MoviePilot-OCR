@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 ENV LANG="C.UTF-8" \
     TZ="Asia/Shanghai" \
-    REPO_URL="https://github.com/jxxghp/nas-tools-ocr.git" \
+    REPO_URL="https://github.com/jxxghp/MoviePilot-OCR.git" \
     WORKDIR="/app"
 RUN apt-get update && apt-get install -y git ffmpeg libgomp1 libsm6 libxrender1 libxext6 libgl1 python3 python3-pip
 RUN git clone -b main ${REPO_URL} ${WORKDIR}
