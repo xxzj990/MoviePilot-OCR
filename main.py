@@ -22,7 +22,7 @@ class OCR(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "NAStool OCR API"}
+    return {"message": "MoviePilot OCR API"}
 
 
 @app.post("/captcha/base64")
