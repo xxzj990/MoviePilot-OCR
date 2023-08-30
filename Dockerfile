@@ -5,7 +5,6 @@ ENV LANG="C.UTF-8" \
     WORKDIR="/app"
 RUN apt-get update -y \
     && apt-get install -y \
-        wget \
         git \
         ffmpeg \
         libgomp1 \
@@ -22,7 +21,8 @@ RUN apt-get update -y \
         /var/tmp/*
 RUN git clone -b main ${REPO_URL} ${WORKDIR}
 WORKDIR ${WORKDIR}
-RUN pip3 install -r requirements.txt \
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt \
     && rm -rf \
         /tmp/* \
         /root/.cache \
