@@ -53,9 +53,9 @@ def around_white(img):
     for _w in range(w):
         for _h in range(h):
             if (_w <= 5) or (_h <= 5) or (_w >= w-5) or (_h >= h-5):
-		        img[(_w, _h, 0)] = 255
-		        img[(_w, _h, 1)] = 255
-		        img[(_w, _h, 2)] = 255
+                img[(_w, _h, 0)] = 255
+                img[(_w, _h, 1)] = 255
+                img[(_w, _h, 2)] = 255
     return img
 
 
@@ -85,9 +85,9 @@ def noise_unsome_piexl(img):
                 if right_color.all() == center_color.all():
                     cnt += 1
                 if cnt < 1:
-		            img[(_w, _h, 0)] = 255
-		            img[(_w, _h, 1)] = 255
-		            img[(_w, _h, 2)] = 255
+                    img[(_w, _h, 0)] = 255
+                    img[(_w, _h, 1)] = 255
+                    img[(_w, _h, 2)] = 255
     return img
 
 
